@@ -12,15 +12,15 @@ function Forms() {
       <div className="buildYourOwn">
         <div className="coverForm"></div>
       </div>
-      <form>
-        <h2>Choice of Size</h2>
+      <form className="sizePadding">
+        <h2 className="pizHead">Choice of Size</h2>
         <p>Required</p>
         <select>
           <option value="Small">Small</option>
           <option value="Medium">Medium</option>
           <option value="Large">Large</option>
         </select>
-        <h2>Choice of Sauce</h2>
+        <h2 className="pizHead">Choice of Sauce</h2>
         <p>Required</p>
         <label name="red">Original Red</label>
         <input name="red" type="radio" />
@@ -30,9 +30,8 @@ function Forms() {
         <input name="bbq" type="radio" />
         <label name="spinach">Spinach Alfredo</label>
         <input name="spinach" type="radio" />
-
-        <h2>Add Toppings</h2>
-        <p>Choose What You Would Like </p>
+        <h2 className="pizHead">Add Toppings</h2>
+        <p>Choose What You Would Like- </p>
         <label htmlFor="Pepperoni">Pepperoni</label>
         <input name="Pepperoni" type="checkbox" />
         <label htmlFor="Sausage">Sausage</label>
@@ -61,6 +60,20 @@ function Forms() {
         <input name="Pineapple" type="checkbox" />
         <label htmlFor="extraCheese">Extra Cheese</label>
         <input name="extraCheese" type="checkbox" />
+        <h2 className="pizHead">Substitute</h2>
+        <p>Choose up to 1</p>
+        Gluten free Crust{" "}
+        <label className="switch">
+          <input type="checkbox" />
+          <span className="slider round"></span>(+ $1)
+        </label>
+        <h2 className="pizHead">Special Instructions</h2>
+        <label>
+          <input type="text" name="name" placeholder="Extra sauce?" />
+        </label>
+        <h2>Anything else?</h2>
+        <div>Total: $17.99</div>
+        <input type="submit" value="Submit" />
       </form>
     </div>
   );

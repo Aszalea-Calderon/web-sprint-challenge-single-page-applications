@@ -15,3 +15,10 @@
   height: 40vh;
   width: 100%;
 }
+.pizHead {
+  text-decoration: underline;
+}
+
+.sizePadding {
+  padding-left: 10%;
+}
