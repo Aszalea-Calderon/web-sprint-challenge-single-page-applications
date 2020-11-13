@@ -1,5 +1,5 @@
 import React from "react";
-import Forms from "./comp/Forms.js";
+import Forms from "./comp/forms/Forms.js";
 import Shipped from "./comp/Shipped.js";
 import Home from "./comp/homepage/banner/Home.js";
 import Option from "./comp/homepage/options/Options.js";
