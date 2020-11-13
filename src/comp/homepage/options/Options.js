@@ -6,9 +6,9 @@ function Options() {
     <div>
       <h2 className="foodOpt">Pizza's in Gotham City</h2>
       <div class="boxes">
-        <div id="box1" class="box">
+        <a href="../../forms/Forms.js" id="box1" class="box">
           Vegetarian
-        </div>
+        </a>
         <div id="box2" class="box">
           Meat Lovers
         </div>

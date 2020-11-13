@@ -1,9 +1,15 @@
 import React from "react";
 import Nav from "../homepage/nav/Nav";
-import Input from "./Input";
+
 import "./styleForm.css";
 
 function Forms() {
+  //Managing state
+  // const defaultState ={
+  //   name="",
+
+  // }
+
   return (
     <div>
       <Nav />
@@ -15,7 +21,8 @@ function Forms() {
       <form className="sizePadding">
         <h2 className="pizHead">Choice of Size</h2>
         <p>Required</p>
-        <select>
+        <select name="select">
+          <option value="null">-Choose Your Size-</option>
           <option value="Small">Small</option>
           <option value="Medium">Medium</option>
           <option value="Large">Large</option>
@@ -62,7 +69,7 @@ function Forms() {
         <input name="extraCheese" type="checkbox" />
         <h2 className="pizHead">Substitute</h2>
         <p>Choose up to 1</p>
-        Gluten free Crust{" "}
+        Gluten free Crust
         <label className="switch">
           <input type="checkbox" />
           <span className="slider round"></span>(+ $1)
@@ -73,7 +80,7 @@ function Forms() {
         </label>
         <h2>Anything else?</h2>
         <div>Total: $17.99</div>
-        <input type="submit" value="Submit" />
+        <button className="add">Add To order</button>
       </form>
     </div>
   );
