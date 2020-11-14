@@ -5,23 +5,23 @@ function Options() {
   return (
     <div>
       <h2 className="foodOpt">Pizza's in Gotham City</h2>
-      <div class="boxes">
-        <a href="../../forms/Forms.js" id="box1" class="box">
+      <div className="boxes">
+        <a href="../../forms/Forms.js" id="box1" className="box">
           Vegetarian
         </a>
-        <div id="box2" class="box">
+        <div id="box2" className="box">
           Meat Lovers
         </div>
-        <div id="box3" class="box">
+        <div id="box3" className="box">
           The Special
         </div>
-        <div id="box4" class="box">
+        <div id="box4" className="box">
           The Italian
         </div>
-        <div id="box5" class="box">
+        <div id="box5" className="box">
           The Cheese Monster
         </div>
-        <div id="box6" class="box">
+        <div id="box6" className="box">
           Catering
         </div>
       </div>
