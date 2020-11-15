@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Source+Sans+Pro:wght@700&display=swap");
+
+.foodOpt {
+  padding-left: 90px;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.box {
+  font-family: "Source Sans Pro", sans-serif;
+  width: 30%;
+  height: 20vh;
+  background: black;
+  margin: 20px 2.5%;
+  color: whitesmoke;
+  text-shadow: 1px 1px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box1 {
+  background-image: url("./images/vegpizza.jpg");
+  background-size: cover;
+}
+
+#box2 {
+  background-image: url("./images/meatlovers.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#box3 {
+  background-image: url("./images/special.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#box4 {
+  background-image: url("./images/italian.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#box5 {
+  background-image: url("./images/cheese.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#box6 {
+  background-image: url("./images/anthonys.jpg");
+  background-size: cover;
+  background-position: bottom;
+}

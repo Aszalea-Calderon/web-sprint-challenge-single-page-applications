@@ -1,10 +1,19 @@
 import React from "react";
+import Forms from "./comp/forms/Forms.js";
+import Shipped from "./comp/Shipped.js";
+import Home from "./comp/homepage/banner/Home.js";
+import Option from "./comp/homepage/options/Options.js";
+
+import Nav from "./comp/homepage/nav/Nav.js";
 
 const App = () => {
   return (
     <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
+      <Nav />
+      <Home />
+      <Option />
+      <Forms />
+      <Shipped />
     </>
   );
 };

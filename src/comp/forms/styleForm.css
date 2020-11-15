@@ -1,0 +1,38 @@
+.byop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buildYourOwn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 50%; */
+}
+.coverForm {
+  background-image: url("./images/cover.jpg");
+  height: 40vh;
+  width: 100%;
+}
+.pizHead {
+  text-decoration: underline;
+  background-color: cornsilk;
+}
+
+.sizePadding {
+  padding-left: 10%;
+}
+.add {
+  background-color: transparent;
+  border: solid black 2px;
+  border-radius: 25px;
+
+  color: black;
+  text-shadow: 1px 1px gray;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 1rem;
+}
