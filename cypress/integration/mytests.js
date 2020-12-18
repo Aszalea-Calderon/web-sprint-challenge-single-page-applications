@@ -28,6 +28,13 @@ describe("MyPizzaApp", () => {
   const threeCheeseCheck = () => cy.get('input[label="Three Cheese"]');
   const pineapple = () => cy.get('input[label="Pineapple"]');
   const xCheese = () => cy.get('input[label="xCheese"]');
+  const smallPizza = () => cy.get("select").select("Small");
+  const mediumPizza = () => cy.get("select").select("Medium");
+  const largePizza = () => cy.get("select").select("Large");
+  const origRed = () => cy.get('[type="radio"]').check("Original Red");
+  const garlicRanch = () => cy.get('[type="radio"]').check("Garlic Ranch");
+  const bbqSauce = () => cy.get('[type="radio"]').check("Bbq Sauce");
+  const spinach = () => cy.get('[type="radio"]').check("Bbq Sauce");
 
   it("Checks if elements are there", () => {
     allCheckBoxes().should("exist");
@@ -47,9 +54,20 @@ describe("MyPizzaApp", () => {
     xCheese().should("exist");
     substitute().should("exist");
     instructions().should("exist");
+    smallPizza().should("exist");
+    mediumPizza().should("exist");
+    largePizza().should("exist");
+    origRed().should("exist");
+    garlicRanch().should("exist");
+    bbqSauce().should("exist");
+    spinach().should("exist");
   });
 
   it("Writing instructions", () => {
     instructions().type("hello");
+  });
+
+  it("adds things to the pizza", () => {
+    allCheckBoxes().check();
   });
 });

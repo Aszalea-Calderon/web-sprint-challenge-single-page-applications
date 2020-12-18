@@ -20,16 +20,46 @@ function Forms() {
     instructions: "",
   };
 
+  //const [errors, setErrors] = useState({ ...defaultState });
   const [pizzaForm, setPizzaForm] = useState(defaultState);
+  //formState Schema
+  // let formSchema = Yup.object().shape({
+  //   size: Yup.string().required("Size is required"),
+  //   sauce: Yup.string().required("One required"),
+  //   topping: Yup.string(),
+  //   substitute: Yup.string(),
+  //   instructions: Yup.string(),
+  // });
+
+  //Validate Change//??
+  // const validateChange = (e) => {
+  //   Yup.reach(formSchema, e.size)
+  //     .validate(e.value)
+  //     .then((valid) => setErrors({ ...errors, [e.size]: "" }))
+  //     .catch((error) => console.log(error));
+  // };
+
+  //on Submit function
+  const formSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Submitted");
+  };
 
   const change = (e) => {
     console.log("input Changed!", e.target.value);
+    // const sauceValue =
+    //   e.target.type === "radio" ? e.target.value : e.target.label;
+    // setPizzaForm({
+    //   ...pizzaForm,
+    //   [e.target.name]: sauceValue,
+    // });
     const value =
-      e.target.type === "checkbox" ? e.target.checked : e.target.value;
+      e.target.type === "checkbox" ? e.target.checked : e.target.value; //This was checked and value, When in that state it allowed for sauce but not toppings, it would come back as true. When we have it as value and label it allows for checkbox value but not sauce
     setPizzaForm({
       ...pizzaForm,
       [e.target.name]: value,
     });
+    // validateChange(e);
   };
 
   return (
@@ -43,14 +73,14 @@ function Forms() {
       <form className="sizePadding">
         <h2 className="pizHead">Choice of Size</h2>
         <p>Required</p>
-        <select name="select" onChange={change}>
+        <select name="size" label="size" onChange={change}>
           <option name="null" value="0" label="Choose Your Size">
             -Choose Your Size-
           </option>
           <option name="size" id="small" value="small" label="Small">
             Small
           </option>
-          <option name="size" id="Medium" value="medium">
+          <option name="size" id="Medium" value="Medium">
             Medium
           </option>
           <option name="size" id="Large" value="large">
@@ -66,6 +96,7 @@ function Forms() {
           name="sauce"
           type="radio"
           value="Original Red"
+          id="Original Red"
           label="Original Red"
         />
         <label htmlFor="Garlic Ranch">Garlic Ranch</label>
@@ -74,6 +105,7 @@ function Forms() {
           name="sauce"
           type="radio"
           value="Garlic Ranch"
+          id="Garlic Ranch"
           label="Garlic Ranch"
         />
         <label htmlFor="Bbq Sauce">BBQ Sauce</label>
@@ -83,6 +115,7 @@ function Forms() {
           type="radio"
           value="Bbq Sauce"
           label="Bbq Sauce"
+          id="Bbq Sauce"
         />
         <label htmlFor="Spinach">Spinach Alfredo</label>
         <input
@@ -91,6 +124,7 @@ function Forms() {
           type="radio"
           value="Spinach"
           label="Spinach"
+          id="Spinach"
         />
         {/* Toppings */}
         <h2 className="pizHead">Add Toppings</h2>
@@ -233,7 +267,9 @@ function Forms() {
         </label>
         <h2>Anything else?</h2>
         <p className="text">Total:4$</p>
-        <button className="add">Add To order</button>
+        <button className="add" onSubmit={formSubmit}>
+          Add To order
+        </button>
       </form>
     </div>
   );
